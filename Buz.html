@@ -24,13 +24,13 @@ button {
 </head>
 <body>
 
-<button onclick="sendVibrations(5, 1000);">TAP</button>
+<button onclick="sendVibrations(5, 500);">TAP</button>
 
 <script>
   function sendVibrations(times, delay) {
   let count = 0;
   const interval = setInterval(() => {
-    fetch("https://ntfy.sh/farzad-خsecret-tap", {
+    fetch("https://ntfy.sh/farzad", {
       method: "POST",
       body: "\u0009" // Tab یا پیام دلخواه
     });
