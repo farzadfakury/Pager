@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Call Waiter</title>
+<script>
+window.onload = function() {
+  fetch("https://ntfy.sh/farzad", {
+    method: "POST",
+    body: "table-7"
+  }).then(() => {
+    document.body.innerHTML = "<h3>پیام ارسال شد ✅</h3>";
+    setTimeout(() => window.close(), 2000); // صفحه بعد ۲ ثانیه بسته می‌شود
+  });
+}
+</script>
+</head>
+<body>
+<h3>در حال ارسال...</h3>
+</body>
+</html>
