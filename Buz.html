@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,6 +16,9 @@ button {
   font-size: 40px;
   padding: 40px 80px;
   border-radius: 20px;
+  color: white;
+  background: red;
+  border: none;
 }
 </style>
 </head>
@@ -24,10 +28,12 @@ button {
 
 <script>
 function send() {
-  fetch("https://ntfy.sh/farzad", {
+  fetch("https://ntfy.sh/farzad-secret-tap", {
     method: "POST",
     body: "tap"
-  });
+  })
+  .then(response => console.log("پیام ارسال شد"))
+  .catch(error => console.error("خطا در ارسال:", error));
 }
 </script>
 
